@@ -9,3 +9,4 @@ class Pedido:   #OBJETO
         self.aprovCom = 2   #compras
         self.log = 2       #logistica
         self.entrega = 0   #entregue
+        self.justificava = 0 #caso negado(dizer o pq)
