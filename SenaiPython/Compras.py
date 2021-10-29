@@ -45,10 +45,11 @@ class Compras:
                     r = input("Aprovar(1)   Reprovar(0)")
                     lista[x].aprovCom = r
                     h=h+1
+                if  int(r) == 0:
+                    lista[x].justificava=input('Motivo:')    
 
         if h == 0 :
             print("Aguardando requisições")  
 
         x = input("")
         Compras.Main()
-
