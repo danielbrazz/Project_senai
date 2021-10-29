@@ -31,7 +31,8 @@ class Gerente:
             elif int(lista[x].aprovGen) == 1:
                 print("Aprovado")
             else:
-                print("Negado")
+                print("Negado")   
+
             print("")
 
         y = input("Modificar item nº:")
@@ -40,6 +41,10 @@ class Gerente:
                 print(lista[x].qtd + " " +lista[x].nome)
                 r = input("Aprovar(1)   Reprovar(0)")
                 lista[x].aprovGen = r
+                if  int(r) == 0:
+                    lista[x].justificava=input('Motivo:')
+             
+
         
         x = input("")
         Gerente.Main()
