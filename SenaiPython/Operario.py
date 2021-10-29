@@ -36,21 +36,21 @@ class Operario:
             print("Item: "+obj.qtd+" "+obj.nome)
             
             if int(obj.aprovGen) == 0:
-                print("Negado[gerencia]")
+                print("Negado[gerencia]", 'Motivo:',obj.justificava)
+
             elif int(obj.aprovGen) == 2:
                 print("Sendo examinado")
             elif int(obj.aprovGen) == 1:
                 print("Aprovado[gerencia]")
-
             if int(obj.aprovCom) == 0:
-                print("Negado[Compras]")
+                print("Negado[Compras]",'Motivo:',obj.justificava)
             elif int(obj.aprovCom) == 2:
                 print("Sendo examinado")
             elif int(obj.aprovCom) == 1:
                 print("Aprovado[Compras]")
 
             if int(obj.log) == 0:
-                print("Negado[Logistica]")
+                print("Negado[Logistica]",'Motivo:',obj.justificava)
             elif int(obj.log) == 2:
                 print("Sendo examinado")
             elif int(obj.log) == 1:
