@@ -42,8 +42,14 @@ class Logistica:
                     print(lista[x].qtd + " " +lista[x].nome)
                     r = input("Recebido(1)   Recusado(0)")
                     lista[x].log = r
+                    if  int(r) == 0:
+                        lista[x].justificava=input('Motivo:')
+                    
+                if int(lista[x].log) == 1:
                     s = input("Foi entregue(1)  Em espera(0) ")
                     lista[x].entrega = s
+                else:
+                    print("")    
                     h=h+1
         if h==0: 
             print("Aguardando Requisições")           
