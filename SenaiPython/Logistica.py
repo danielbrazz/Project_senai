@@ -2,6 +2,7 @@ import ObjetoPedido
 import os
 clear = lambda: os.system('cls')
 lista = ObjetoPedido.listaP
+retirada=ObjetoPedido.listaP
 
 pp = ObjetoPedido.Pedido("papel","100")
 lista.append(pp)
@@ -13,10 +14,13 @@ class Logistica:
         clear()
         print("#######PERFIL GERENCIAL#######")
         print("1-Verificar/Modificar solicitações")
+        print("2-Retirada de produto")
         print("5-Logout")
         r = input(": ")
         if int(r) == 1:
             Logistica.Lista()
+        elif  int(r) == 2:
+            Logistica.Retirada()   
         elif int(r) == 5:
             return
         else:
@@ -51,8 +55,19 @@ class Logistica:
                 else:
                     print("")    
                     h=h+1
+    def Retirada():
+        clear()
+        for x in range(len(lista)):
+            if int(lista[x].log)==1 : 
+               print(lista[x].qtd + " " +lista[x].nome)
+            y = input("Modificar item nº:")
+            
+            for x in range(len(lista)):
+                if x == int(y):
+                    r = input("Sim(1)   Não(0)")
+                    lista[x].entrega = r
         if h==0: 
-            print("Aguardando Requisições")           
+            print("Aguardando Requisições")            
+                       
         x = input("")
         Logistica.Main()
-
