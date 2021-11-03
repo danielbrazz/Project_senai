@@ -37,24 +37,29 @@ class Operario:
             
             if int(obj.aprovGen) == 0:
                 print("Negado[gerencia]", 'Motivo:',obj.justificava)
-
+                print('Motivo: '+obj.justificativa)
             elif int(obj.aprovGen) == 2:
-                print("Sendo examinado")
+                print("[gerencia]Sendo examinado")
             elif int(obj.aprovGen) == 1:
-                print("Aprovado[gerencia]")
-            if int(obj.aprovCom) == 0:
-                print("Negado[Compras]",'Motivo:',obj.justificava)
-            elif int(obj.aprovCom) == 2:
-                print("Sendo examinado")
-            elif int(obj.aprovCom) == 1:
-                print("Aprovado[Compras]")
+                print("[gerencia]Aprovado")
 
-            if int(obj.log) == 0:
-                print("Negado[Logistica]",'Motivo:',obj.justificava)
-            elif int(obj.log) == 2:
-                print("Sendo examinado")
-            elif int(obj.log) == 1:
-                print("Aprovado[Logistica]")
+                if int(obj.aprovCom) == 0:
+                    print("[Compras]Negado")
+                    print('Motivo: '+obj.justificativa)
+                elif int(obj.aprovCom) == 2:
+                    print("[Compras]Sendo examinado")
+                elif int(obj.aprovCom) == 1:
+                    print("[Compras]Aprovado")
+
+                    if int(obj.log) == 0:
+                        print("[Logistica]Negado")
+                        print('Motivo: '+obj.justificativa)
+                    elif int(obj.log) == 2:
+                        print("[Logistica]Sendo examinado")
+                    elif int(obj.log) == 1:
+                        print("[Logistica]Aprovado")
+                        if int(obj.entrega) == 0:
+                            print("[Logistica]!Retirar!")
 
             print("")
         x = input("")
