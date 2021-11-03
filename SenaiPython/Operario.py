@@ -64,3 +64,5 @@ class Operario:
             print("")
         x = input("")
         Operario.Main()
+        
+        #mudei
